@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Goodeats</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .top {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .top a {
+      float: left;
+      display: block;
+      color: #f1f1f1;
+      text-align: center;
+      padding: 16px 16px;
+      text-decoration: none;
+    }
+
+    .top a:hover {
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    .content {
+      background-color: lightblue;
+      scale: 120%;
+      padding: 10px;
+      max-width: 500px;
+      border-radius: 5px;
+      margin: auto;
+      margin-bottom: 100px;
+      margin-top: 100px;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function goSupplierMode() {
+      document.getElementById("username/name").name = "name"
+      document.getElementById("username/name").placeholder = "Name"
+      document.getElementById("email").style.display = "block"
+    }
+    function goUserMode() {
+      document.getElementById("username/name").name = "username"
+      document.getElementById("username/name").placeholder = "Username"
+      document.getElementById("email").style.display = "none"
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="top">
+    <a href="/home">Home</a>
+    <b style="float:right; text-align: center; padding: 16px 16px; font-size: 100%; color: khaki;">Add New Recipe</b>
+  </div>  
+
+  <div class="content">
+    <form action="/add_recipe" method="post">
+      <p style="margin-bottom: 1px;">Title</p>
+      <input required name="title" type="text" placeholder="example: Pizza"
+        style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 100%;" />
+
+      <p style="margin-bottom: 1px;">Ingredients</p>
+      <input required name="ingredients" type="txt" placeholder="example: meat,cheese,bread"
+        style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 100%;" />
+
+      <p style="margin-bottom: 3px;">Vegetarian</p>
+      <div style="display:block; margin: auto; background-color: white; border-radius: 2px; margin-bottom: 10px; padding: 5px; width: 100%;">
+      <input required name="Vegetarian" value="Yes" type="radio" id="yes"/>
+      <label for="yes">Yes</label>
+      <input name="Vegetarian" value="No" type="radio" id="no"/>
+      <label for="no">No</label>
+      </div>
+      
+      <p style="margin-bottom: 1px;">Minutes To Ready</p>
+      <input required name="minutes_to_ready" type="number" placeholder="example: 30"
+        style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 100%;" />
+      
+      <p style="margin-bottom: 1px;">Tags</p>
+      <input name="tags" type="txt" placeholder="example: dinner,lunch,breakfast"
+        style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 100%;" />
+
+      <p style="margin-bottom: 1px;">Image Address</p>
+      <input name="image_address" type="txt" placeholder="example: https://goodeats.io/front-alt.jpg"
+        style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 100%;" />
+
+      <button type="submit" style="display:block; width: 100%; padding: 7px;">Add</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>👨🏻‍💻: Mahdi Cheraghi</p>
+    <p>💬: @pmahdicheraghi@gmail.com</p>
+    <p>📞: 09192936453</p>
+  </div>
+
+</body>
+
+</html>
